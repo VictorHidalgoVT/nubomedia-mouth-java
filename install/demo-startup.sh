@@ -8,12 +8,12 @@ echo "Service [$APP_NAME] - [$1]"
 APP_HOME=/var/lib/kurento
 APP_NAME=nubo-mouth-detector
 APP_JAR=NuboMouthJava
-APP_VERSION=6.4.1-SNAPSHOT
+APP_VERSION=6.4.0
 APP=$APP_NAME-$APP_VERSION
-APP_PORT=8450
+APP_PORT=8103
 CONSOLE_LOG=/var/log/kurento-media-server/$APP_NAME.log
 
-JAVA_OPTS="-Dserver.port=$APP_PORT -Dapp.server.url=https://127.0.0.1:$APP_PORT/"
+JAVA_OPTS="-Dserver.port=$APP_PORT -Dapp.server.url=http://127.0.0.1:$APP_PORT/"
 JAVA_OPTS="$JAVA_OPTS -Djava.security.egd=file:/dev/./urandom"
 
 # Setup the JVM
