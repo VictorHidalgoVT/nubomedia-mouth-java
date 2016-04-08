@@ -115,8 +115,8 @@ public class NuboMouthJavaHandler extends TextWebSocketHandler {
 
 	    /******** Media Logic ********/
 	    mouth = new NuboMouthDetector.Builder(user.getMediaPipeline()).build();
-	    mouth.activateServerEvents(1, 3000);
-	    addMouthListener();
+	    //mouth.activateServerEvents(1, 3000);
+	    //addMouthListener();
 	    webRtcEndpoint.connect(mouth);
 	    mouth.connect(webRtcEndpoint);
 
@@ -145,7 +145,7 @@ public class NuboMouthJavaHandler extends TextWebSocketHandler {
     }
 
 
-    private void addMouthListener()
+   /* private void addMouthListener()
     {    	
     	mouth.addOnMouthListener(new EventListener<OnMouthEvent>() {
 	    	@Override
@@ -155,7 +155,7 @@ public class NuboMouthJavaHandler extends TextWebSocketHandler {
     		}	    	
 		});
 
-    }
+    }*/
 
     private void notEnoughResources(WebSocketSession session) {
 	// 1. Send notEnoughResources message to client
